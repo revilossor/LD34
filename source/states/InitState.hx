@@ -9,6 +9,7 @@ class InitState extends BaseState
 	}
 	function init() {
 		trace('init');
+		FlxG.mouse.useSystemCursor = true;
 		Reg.progress = new Progress();	// TODO load and parse ?
 		onInitComplete();
 	}
