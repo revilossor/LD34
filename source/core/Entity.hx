@@ -22,5 +22,4 @@ class Entity extends FlxSprite
 	public function renew() {
 		alive = exists = _notSeen = true;
 	}
-	
 }

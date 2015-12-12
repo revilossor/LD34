@@ -3,6 +3,7 @@ import core.tiled.TiledMap;
 import core.tiled.TiledTileSet;
 import flixel.group.FlxGroup;
 import flixel.tile.FlxTilemap;
+import flixel.util.FlxPoint;
 import haxe.io.Path;
 
 class Level extends TiledMap
@@ -11,6 +12,7 @@ class Level extends TiledMap
 	
 	public var collidables:FlxGroup;
 	public var view:FlxGroup;
+	public var playerSpawnPoint:FlxPoint;
 	
 	public function new(map:Dynamic) 
 	{
@@ -21,7 +23,9 @@ class Level extends TiledMap
 		trace('init');
 		collidables = new FlxGroup();
 		view = new FlxGroup();
+		playerSpawnPoint = new FlxPoint(32, 32);
 		initTileLayers();
+		initObjectLayers();
 	}
 	function initTileLayers():Void {
 		for (tileLayer in layers) {
@@ -54,6 +58,12 @@ class Level extends TiledMap
 	}
 	function initObjectLayers() {
 		for (group in objectGroups) {
+			for(character in group.objects) {
+				trace('\tinit character ${character.type} at ${character.x}, ${character.y}');
+				switch(character.type) {
+					case CharacterTypes.PLAYER_START : playerSpawnPoint = FlxPoint.weak(character.x, character.y);
+				}
+			}
 		}
 	}
 	function initImageLayers() {
