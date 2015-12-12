@@ -1,4 +1,5 @@
 package characters.player;
+import flixel.FlxBasic;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
@@ -29,7 +30,7 @@ class Player extends FlxGroup
 	{
 		super();
 		hitbox = new FlxSprite(xp, yp);
-		hitbox.makeGraphic(4, 16, 0x00ff00ff);
+		hitbox.makeGraphic(8, 16, 0x00ff00ff);
 		add(hitbox);
 		add(_body = new PlayerBody());
 		add(_left = new PlayerFoot("left"));
@@ -46,12 +47,12 @@ class Player extends FlxGroup
 		positionElements();
 	}
 	function positionElements() {
-		_body.x = hitbox.x - 6;			_body.y = hitbox.y;
-		_left.x = hitbox.x - 6;			_left.y = hitbox.y + 16 - (Settings.PLAYER_FOOT_CHARGE_OFFSET * _leftCharge);	
-		_right.x = hitbox.x + 9 - 6;	_right.y = hitbox.y + 16 - (Settings.PLAYER_FOOT_CHARGE_OFFSET * _rightCharge);	
+		_body.x = hitbox.x - 4;			_body.y = hitbox.y;
+		_left.x = hitbox.x - 4;			_left.y = hitbox.y + 16 - (Settings.PLAYER_FOOT_CHARGE_OFFSET * _leftCharge);	
+		_right.x = hitbox.x + 9 - 4;	_right.y = hitbox.y + 16 - (Settings.PLAYER_FOOT_CHARGE_OFFSET * _rightCharge);	
 	}
 	
-	public function hitLevel(player:FlxSprite, level:FlxTilemap) {
+	public function hitSolid(player:FlxSprite, solid:FlxBasic) {
 		if (_canJump == false) {	// in air
  		}
 		_canJump = _left.visible = _right.visible = true;
@@ -63,7 +64,6 @@ class Player extends FlxGroup
 		_leftCharge = _rightCharge = 0;
 	}
 	public function chargeJump(side:String) {
-		//if (!_canJump) { return; }
 		trace('charge $side jump');
 		if (side == "left") {
 			if(_leftTween != null) { _leftTween.cancel(); }
@@ -95,7 +95,7 @@ class Player extends FlxGroup
 	}
 	public function executeMiddleJump() {
 		if (!_canJump) { startJump(); return; }
-		hitbox.velocity.set(0, -((Reg.progress.rightPower + Reg.progress.leftPower) * (_rightCharge + _leftCharge)));
+		hitbox.velocity.set(0, -(((Reg.progress.rightPower + Reg.progress.leftPower) / 2) * ((_rightCharge + _leftCharge) / 2)));
 		startJump();
 	}
 }

@@ -1,0 +1,10 @@
+one way platforms
+spikes
+one way shooters
+aimers
+moving spikes
+moving platforms
+doors
+moving one way shooters
+moving aimers
+flying spikes

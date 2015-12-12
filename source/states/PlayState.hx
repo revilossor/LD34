@@ -21,6 +21,7 @@ class PlayState extends BaseState
 	override public function create() {
 		_level = new Level(Reg.levelPaths[_levelIndex]);
 		_player = new Player(_level.playerSpawnPoint.x + 7, _level.playerSpawnPoint.y - 16);
+		_level.initCharacters(_player);
 		_input = new PlayerInputComponent(_player);
 		super.create();
 		FlxG.worldBounds.set(0, 0, _level.fullWidth, _level.fullHeight);
@@ -30,6 +31,8 @@ class PlayState extends BaseState
 		add(_input);
 		
 		add(_level.view);
+		add(_level.characters);
+		
 		add(_player);
 	}
 	override function onFadeInComplete() {
@@ -40,6 +43,7 @@ class PlayState extends BaseState
 	}
 	override public function update() {
 		super.update();
-		FlxG.collide(_player.hitbox, _level.collidables, _player.hitLevel);
+		FlxG.collide(_player.hitbox, _level.collidables, _player.hitSolid);
+		FlxG.collide(_player.hitbox, _level.characters, _player.hitSolid);
 	}
 }

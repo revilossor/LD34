@@ -1,4 +1,9 @@
 package level;
+import characters.oneway.OneWayDown;
+import characters.oneway.OneWayLeft;
+import characters.oneway.OneWayRight;
+import characters.oneway.OneWayUp;
+import characters.player.Player;
 import core.tiled.TiledMap;
 import core.tiled.TiledTileSet;
 import flixel.group.FlxGroup;
@@ -13,6 +18,7 @@ class Level extends TiledMap
 	public var collidables:FlxGroup;
 	public var view:FlxGroup;
 	public var playerSpawnPoint:FlxPoint;
+	public var characters:LevelCharacterGroup;
 	
 	public function new(map:Dynamic) 
 	{
@@ -25,7 +31,21 @@ class Level extends TiledMap
 		view = new FlxGroup();
 		playerSpawnPoint = new FlxPoint(32, 32);
 		initTileLayers();
-		initObjectLayers();
+		initPlayerStart();
+	}
+	public function initCharacters(player:Player) {
+		characters = new LevelCharacterGroup();
+		for (group in objectGroups) {
+			for(character in group.objects) {
+				trace('\tinit character ${character.type} at ${character.x}, ${character.y}');
+				switch(character.type) {
+					case CharacterTypes.ONE_WAY_UP : characters.oneWayUps.add(new OneWayUp(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_DOWN : characters.oneWayUps.add(new OneWayDown(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_LEFT : characters.oneWayUps.add(new OneWayLeft(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_RIGHT : characters.oneWayUps.add(new OneWayRight(character.x, character.y - 32));
+				}
+			}
+		}
 	}
 	function initTileLayers():Void {
 		for (tileLayer in layers) {
@@ -56,13 +76,10 @@ class Level extends TiledMap
 			}
 		}
 	}
-	function initObjectLayers() {
+	function initPlayerStart() {
 		for (group in objectGroups) {
 			for(character in group.objects) {
-				trace('\tinit character ${character.type} at ${character.x}, ${character.y}');
-				switch(character.type) {
-					case CharacterTypes.PLAYER_START : playerSpawnPoint = FlxPoint.weak(character.x, character.y);
-				}
+				if(character.type == CharacterTypes.PLAYER_START) { playerSpawnPoint = FlxPoint.weak(character.x, character.y);	}
 			}
 		}
 	}

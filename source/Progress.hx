@@ -7,7 +7,7 @@ class Progress
 	public var leftPower:Float = 400;
 	public var rightPower:Float = 400;
 	
-	public function new() 
+	public function new()
 	{
 		
 	}

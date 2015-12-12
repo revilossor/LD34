@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="20" tilewidth="32" tileheight="32" nextobjectid="2">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="20" tilewidth="32" tileheight="32" nextobjectid="50">
  <tileset firstgid="1" name="tiles-basecolour" tilewidth="32" tileheight="32">
   <image source="tiles-basecolour.png" width="1480" height="32"/>
   <tile id="35">
@@ -22,6 +22,45 @@
   </data>
  </layer>
  <objectgroup name="characters">
-  <object id="1" type="PlayerStart" gid="47" x="541.333" y="82.6667"/>
+  <object id="1" type="PlayerStart" gid="47" x="69.9997" y="606"/>
+  <object id="2" type="OneWayUp" gid="48" x="600" y="500"/>
+  <object id="3" type="OneWayUp" gid="48" x="632" y="500"/>
+  <object id="4" type="OneWayUp" gid="48" x="664" y="500"/>
+  <object id="6" type="OneWayUp" gid="48" x="696" y="500"/>
+  <object id="10" type="OneWayUp" gid="48" x="793" y="539"/>
+  <object id="11" type="OneWayUp" gid="48" x="857" y="539"/>
+  <object id="12" type="OneWayUp" gid="48" x="761" y="539"/>
+  <object id="13" type="OneWayUp" gid="48" x="825" y="539"/>
+  <object id="14" type="OneWayUp" gid="48" x="909" y="462"/>
+  <object id="15" type="OneWayUp" gid="48" x="973" y="462"/>
+  <object id="16" type="OneWayUp" gid="48" x="877" y="462"/>
+  <object id="17" type="OneWayUp" gid="48" x="941" y="462"/>
+  <object id="18" type="OneWayUp" gid="48" x="702" y="356"/>
+  <object id="19" type="OneWayUp" gid="48" x="852" y="412"/>
+  <object id="20" type="OneWayUp" gid="48" x="670" y="356"/>
+  <object id="21" type="OneWayUp" gid="48" x="734" y="356"/>
+  <object id="22" type="OneWayUp" gid="48" x="425" y="548"/>
+  <object id="23" type="OneWayUp" gid="48" x="489" y="548"/>
+  <object id="24" type="OneWayUp" gid="48" x="393" y="548"/>
+  <object id="25" type="OneWayUp" gid="48" x="457" y="548"/>
+  <object id="26" type="OneWayUp" gid="48" x="1021" y="386"/>
+  <object id="27" type="OneWayUp" gid="48" x="1117" y="386"/>
+  <object id="28" type="OneWayUp" gid="48" x="1053" y="386"/>
+  <object id="29" type="OneWayUp" gid="48" x="1085" y="386"/>
+  <object id="34" type="OneWayUp" gid="48" x="1167" y="509"/>
+  <object id="35" type="OneWayUp" gid="48" x="1107" y="442"/>
+  <object id="36" type="OneWayUp" gid="48" x="1094" y="494"/>
+  <object id="37" type="OneWayUp" gid="48" x="1095" y="571"/>
+  <object id="38" type="OneWayUp" gid="48" x="1151" y="534"/>
+  <object id="39" type="OneWayRight" gid="50" x="190.667" y="578.667"/>
+  <object id="40" type="OneWayLeft" gid="51" x="441.333" y="576"/>
+  <object id="41" type="OneWayLeft" gid="51" x="769.333" y="577.333"/>
+  <object id="42" type="OneWayRight" gid="50" x="1026.67" y="578.667"/>
+  <object id="43" type="OneWayDown" gid="49" x="516" y="582.667"/>
+  <object id="44" type="OneWayDown" gid="49" x="550.667" y="584"/>
+  <object id="45" type="OneWayDown" gid="49" x="592" y="580"/>
+  <object id="46" type="OneWayDown" gid="49" x="657.333" y="588"/>
+  <object id="47" type="OneWayDown" gid="49" x="693.333" y="586.667"/>
+  <object id="48" type="OneWayUp" gid="48" x="628" y="580"/>
  </objectgroup>
 </map>
