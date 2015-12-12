@@ -19,10 +19,10 @@ class PlayerInputComponent extends FlxGroup
 		super.update();
 	}
 	function inputHandling() {
-		if (FlxG.keys.anyJustPressed(Keys.LEFT)) { onLeftPressed(); }
-		if (FlxG.keys.anyJustPressed(Keys.RIGHT)) { onRightPressed(); }
-		if (FlxG.keys.anyJustReleased(Keys.LEFT)) { onLeftReleased(); }
-		if (FlxG.keys.anyJustReleased(Keys.RIGHT)) { onRightReleased(); }
+		if (FlxG.keys.anyJustPressed(Keys.LEFT) || FlxG.mouse.justPressed) { onLeftPressed(); }
+		if (FlxG.keys.anyJustPressed(Keys.RIGHT) || FlxG.mouse.justPressedRight) { onRightPressed(); }
+		if (FlxG.keys.anyJustReleased(Keys.LEFT) || FlxG.mouse.justReleased) { onLeftReleased(); }
+		if (FlxG.keys.anyJustReleased(Keys.RIGHT) || FlxG.mouse.justReleasedRight) { onRightReleased(); }
 	}
 	function onLeftPressed() {
 		if (_leftPressed) { return; }

@@ -1,4 +1,5 @@
 package characters.player;
+import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.group.FlxGroup;
@@ -51,6 +52,8 @@ class Player extends FlxGroup
 	}
 	
 	public function hitLevel(player:FlxSprite, level:FlxTilemap) {
+		if (_canJump == false) {	// in air
+ 		}
 		_canJump = _left.visible = _right.visible = true;
 	}
 	public function startJump() {
