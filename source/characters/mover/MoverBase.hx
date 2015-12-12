@@ -16,15 +16,21 @@ class MoverBase extends Character
 	
 	public function new(?xp:Float = 0, ?yp:Float = 0, ?graphic:Dynamic = null) 
 	{
-		super(_startX = xp, _startY = yp, graphic);
+		super(_startX = xp, _startY = yp);
 		immovable = true;
 		deltaVee = FlxPoint.weak();
+		loadGraphic(graphic, true, 32, 16);
+		animation.add('idle', [2]);
+		animation.add('active', [2, 3, 4, 5, 6, 7, 8], Settings.FRAME_RATE);
+		animation.add('inactive', [1]);
+		animation.play('idle');
 	}
 	override public function update() {
 		if (isTouching(FlxObject.ANY)) {
 			if (_tweenBack != null) { _tweenBack.cancel(); _tweenBack.destroy(); _tweenBack = null; }
 			if(_tween == null) {
-				_tween = FlxTween.tween(velocity, { x:deltaVee.x, y:deltaVee.y }, 0.5, { type:FlxTween.ONESHOT } ); 
+				_tween = FlxTween.tween(velocity, { x:deltaVee.x, y:deltaVee.y }, 0.5, { type:FlxTween.ONESHOT } );
+				animation.play('active');
 			}
 		}
 		else {
@@ -32,8 +38,11 @@ class MoverBase extends Character
 				_tween.cancel(); 
 				_tween.destroy(); 
 				_tween = null; 
-				if(_tweenBack == null) {
-					_tweenBack = FlxTween.tween(this, { x:_startX, y:_startY }, 3, { type:FlxTween.ONESHOT, ease:FlxEase.cubeInOut } );
+				if (_tweenBack == null) {
+					animation.play('inactive');
+					_tweenBack = FlxTween.tween(this, { x:_startX, y:_startY }, 3, { type:FlxTween.ONESHOT, ease:FlxEase.cubeInOut, complete:function(tween) {
+						animation.play('idle');
+					} } );
 				}
 			}
 			velocity.x *= 0.8;

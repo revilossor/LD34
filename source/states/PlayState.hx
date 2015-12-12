@@ -48,14 +48,6 @@ class PlayState extends BaseState
 		super.update();
 		FlxG.collide(_player.hitbox, _level.collidables, _player.hitSolid);
 		FlxG.collide(_player.hitbox, _level.characters, _player.hitSolid);
-		FlxG.overlap(_level.characters.moverUps, _level.collidables, flipMover);
-		FlxG.overlap(_level.characters.moverDowns, _level.collidables, flipMover);
-		FlxG.overlap(_level.characters.moverLefts, _level.collidables, flipMover);
-		FlxG.overlap(_level.characters.moverRights, _level.collidables, flipMover);
 	}
 	
-	function flipMover(mover:MoverBase, thing:FlxBasic) {
-		mover.deltaVee.x *= -1;
-		mover.deltaVee.y *= -1;
-	}
 }
