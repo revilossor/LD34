@@ -4,15 +4,23 @@ import level.Level;
 
 class PlayState extends BaseState
 {
+	var _levelIndex:UInt = 0;
 	var _level:Level;
 	
+	public function new(levelIndex:UInt)
+	{
+		super();
+		_levelIndex = levelIndex;
+	}
+	override public function create() {
+		_level = new Level(Reg.levelPaths[_levelIndex]);
+		super.create();
+		add(_level.view);
+	}
 	override function onFadeInComplete() {
-		FlxG.camera.bgColor = 0xffff00ff;
 		init();
 	}
 	function init() {
 		trace('init');
-		_level = new Level("assets/maps/dev.tmx");
-		add(_level.view);
 	}
 }

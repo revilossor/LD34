@@ -12,9 +12,9 @@ class BaseState extends FlxState
 		});
 	}
 	function onFadeInComplete() {}
-	function switchState(to:Class<BaseState>) {
+	function switchState(to:Class<BaseState>, ?args:Array<Dynamic> = null) {
 		FlxG.camera.fade(FlxColor.BLACK, 0.2, false, function() {
-			FlxG.switchState(Type.createInstance(to, []));
+			FlxG.switchState(Type.createInstance(to, (args == null) ? [] : args));
 		});
 	}
 }

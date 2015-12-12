@@ -9,6 +9,7 @@ class InitState extends BaseState
 	}
 	function init() {
 		trace('init');
+		Reg.progress = new Progress();	// TODO load and parse ?
 		onInitComplete();
 	}
 	function onInitComplete() {

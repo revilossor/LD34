@@ -13,7 +13,7 @@ class MenuState extends BaseState
 	}
 	function inputHandling() {
 		if (FlxG.mouse.justReleased) {
-			switchState(PlayState);
+			switchState(PlayState, [Reg.progress.levelIndex]);
 		}
 	}
 	
