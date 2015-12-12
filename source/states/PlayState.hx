@@ -25,15 +25,21 @@ class PlayState extends BaseState
 		super.create();
 		FlxG.worldBounds.set(0, 0, _level.fullWidth, _level.fullHeight);
 		FlxG.camera.bounds = FlxG.worldBounds;
-		FlxG.camera.follow(_player, FlxCamera.STYLE_PLATFORMER);
+		FlxG.camera.follow(_player.hitbox, FlxCamera.STYLE_PLATFORMER);
+		
+		add(_input);
+		
 		add(_level.view);
 		add(_player);
-		add(_input);
 	}
 	override function onFadeInComplete() {
 		start();
 	}
 	function start() {
 		trace('start');
+	}
+	override public function update() {
+		super.update();
+		FlxG.collide(_player.hitbox, _level.collidables, _player.hitLevel);
 	}
 }

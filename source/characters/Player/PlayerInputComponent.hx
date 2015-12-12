@@ -1,5 +1,6 @@
 package characters.player;
 import flixel.FlxG;
+import flixel.FlxObject;
 import flixel.group.FlxGroup;
 
 class PlayerInputComponent extends FlxGroup
