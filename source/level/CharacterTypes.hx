@@ -7,4 +7,8 @@ class CharacterTypes
 	public static inline var ONE_WAY_DOWN:String = "OneWayDown";
 	public static inline var ONE_WAY_LEFT:String = "OneWayLeft";
 	public static inline var ONE_WAY_RIGHT:String = "OneWayRight";
+	public static inline var MOVER_UP:String = "MoverUp";
+	public static inline var MOVER_DOWN:String = "MoverDown";
+	public static inline var MOVER_LEFT:String = "MoverLeft";
+	public static inline var MOVER_RIGHT:String = "MoverRight";
 }

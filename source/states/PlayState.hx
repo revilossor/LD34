@@ -1,6 +1,9 @@
 package states;
+import characters.Character;
+import characters.mover.MoverBase;
 import characters.player.Player;
 import characters.player.PlayerInputComponent;
+import flixel.FlxBasic;
 import flixel.FlxCamera;
 import flixel.FlxG;
 import level.Level;
@@ -30,10 +33,10 @@ class PlayState extends BaseState
 		
 		add(_input);
 		
+		add(_player);
+		
 		add(_level.view);
 		add(_level.characters);
-		
-		add(_player);
 	}
 	override function onFadeInComplete() {
 		start();
@@ -45,5 +48,14 @@ class PlayState extends BaseState
 		super.update();
 		FlxG.collide(_player.hitbox, _level.collidables, _player.hitSolid);
 		FlxG.collide(_player.hitbox, _level.characters, _player.hitSolid);
+		FlxG.overlap(_level.characters.moverUps, _level.collidables, flipMover);
+		FlxG.overlap(_level.characters.moverDowns, _level.collidables, flipMover);
+		FlxG.overlap(_level.characters.moverLefts, _level.collidables, flipMover);
+		FlxG.overlap(_level.characters.moverRights, _level.collidables, flipMover);
+	}
+	
+	function flipMover(mover:MoverBase, thing:FlxBasic) {
+		mover.deltaVee.x *= -1;
+		mover.deltaVee.y *= -1;
 	}
 }

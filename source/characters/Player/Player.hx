@@ -47,9 +47,9 @@ class Player extends FlxGroup
 		positionElements();
 	}
 	function positionElements() {
-		_body.x = hitbox.x - 4;			_body.y = hitbox.y;
-		_left.x = hitbox.x - 4;			_left.y = hitbox.y + 16 - (Settings.PLAYER_FOOT_CHARGE_OFFSET * _leftCharge);	
-		_right.x = hitbox.x + 9 - 4;	_right.y = hitbox.y + 16 - (Settings.PLAYER_FOOT_CHARGE_OFFSET * _rightCharge);	
+		_body.x = hitbox.x - 4;			_body.y = hitbox.y - 1;
+		_left.x = hitbox.x - 4;			_left.y = hitbox.y + 15 - (Settings.PLAYER_FOOT_CHARGE_OFFSET * _leftCharge);	
+		_right.x = hitbox.x + 9 - 4;	_right.y = hitbox.y + 15 - (Settings.PLAYER_FOOT_CHARGE_OFFSET * _rightCharge);	
 	}
 	
 	public function hitSolid(player:FlxSprite, solid:FlxBasic) {

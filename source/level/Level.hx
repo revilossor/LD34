@@ -1,4 +1,8 @@
 package level;
+import characters.mover.MoverDown;
+import characters.mover.MoverLeft;
+import characters.mover.MoverRight;
+import characters.mover.MoverUp;
 import characters.oneway.OneWayDown;
 import characters.oneway.OneWayLeft;
 import characters.oneway.OneWayRight;
@@ -40,9 +44,13 @@ class Level extends TiledMap
 				trace('\tinit character ${character.type} at ${character.x}, ${character.y}');
 				switch(character.type) {
 					case CharacterTypes.ONE_WAY_UP : characters.oneWayUps.add(new OneWayUp(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_DOWN : characters.oneWayUps.add(new OneWayDown(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_LEFT : characters.oneWayUps.add(new OneWayLeft(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_RIGHT : characters.oneWayUps.add(new OneWayRight(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_DOWN : characters.oneWayDowns.add(new OneWayDown(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_LEFT : characters.oneWayLefts.add(new OneWayLeft(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_RIGHT : characters.oneWayRights.add(new OneWayRight(character.x, character.y - 32));
+					case CharacterTypes.MOVER_UP : characters.moverUps.add(new MoverUp(character.x, character.y - 32));
+					case CharacterTypes.MOVER_DOWN : characters.moverDowns.add(new MoverDown(character.x, character.y - 32));
+					case CharacterTypes.MOVER_LEFT : characters.moverLefts.add(new MoverLeft(character.x, character.y - 32));
+					case CharacterTypes.MOVER_RIGHT : characters.moverRights.add(new MoverRight(character.x, character.y - 32));
 				}
 			}
 		}

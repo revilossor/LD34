@@ -10,10 +10,7 @@ class Character extends FlxSprite
 		super(xp, yp, graphic);
 	}
 	override public function update() {
-		if (_notSeen && isOnScreen()) {
-			_notSeen = false;
-			super.update();
-		} else if (!_notSeen && isOnScreen()) {
+		if (_notSeen || isOnScreen()) {
 			super.update();
 		}
 	}
