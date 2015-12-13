@@ -65,34 +65,34 @@ class Level extends TiledMap
 			for(character in group.objects) {
 				trace('\tinit character ${character.type} at ${character.x}, ${character.y}');
 				switch(character.type) {
-					case CharacterTypes.ONE_WAY_UP : characters.oneWayUps.add(new OneWayUp(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_DOWN : characters.oneWayDowns.add(new OneWayDown(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_LEFT : characters.oneWayLefts.add(new OneWayLeft(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_RIGHT : characters.oneWayRights.add(new OneWayRight(character.x, character.y - 32));
-					case CharacterTypes.MOVER_UP : characters.moverUps.add(new MoverUp(character.x, character.y - 32));
-					case CharacterTypes.MOVER_DOWN : characters.moverDowns.add(new MoverDown(character.x, character.y - 32));
-					case CharacterTypes.MOVER_LEFT : characters.moverLefts.add(new MoverLeft(character.x, character.y - 32));
-					case CharacterTypes.MOVER_RIGHT : characters.moverRights.add(new MoverRight(character.x, character.y - 32));
-					case CharacterTypes.SIDE_MOVER_UP : characters.sideMoverUps.add(new SideMoverUp(character.x, character.y - 32));
-					case CharacterTypes.SIDE_MOVER_DOWN : characters.sideMoverDowns.add(new SideMoverDown(character.x, character.y - 32));
-					case CharacterTypes.SIDE_MOVER_LEFT : characters.sideMoverLefts.add(new SideMoverLeft(character.x, character.y - 32));
-					case CharacterTypes.SIDE_MOVER_RIGHT : characters.sideMoverRights.add(new SideMoverRight(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_MOVER_UP_UP : characters.OneWayMoverUpUps.add(new OnewayMoverUpUp(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_MOVER_DOWN_UP : characters.OneWayMoverDownUps.add(new OnewayMoverDownUp(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_MOVER_LEFT_UP : characters.OneWayMoverLeftUps.add(new OnewayMoverLeftUp(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_MOVER_RIGHT_UP : characters.OneWayMoverRightUps.add(new OnewayMoverRightUp(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_MOVER_UP_DOWN : characters.OneWayMoverUpDowns.add(new OnewayMoverUpDown(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_MOVER_DOWN_DOWN : characters.OneWayMoverDownDowns.add(new OnewayMoverDownDown(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_MOVER_LEFT_DOWN : characters.OneWayMoverLeftDowns.add(new OnewayMoverLeftDown(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_MOVER_RIGHT_DOWN : characters.OneWayMoverRightDowns.add(new OnewayMoverRightDown(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_MOVER_UP_LEFT : characters.OneWayMoverUpLefts.add(new OnewayMoverUpLeft(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_MOVER_DOWN_LEFT : characters.OneWayMoverDownLefts.add(new OnewayMoverDownLeft(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_MOVER_LEFT_LEFT : characters.OneWayMoverLeftLefts.add(new OnewayMoverLeftLeft(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_MOVER_RIGHT_LEFT : characters.OneWayMoverRightLefts.add(new OnewayMoverRightLeft(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_MOVER_UP_RIGHT : characters.OneWayMoverUpRights.add(new OnewayMoverUpRight(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_MOVER_DOWN_RIGHT : characters.OneWayMoverDownRights.add(new OnewayMoverDownRight(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_MOVER_LEFT_RIGHT : characters.OneWayMoverLeftRights.add(new OnewayMoverLeftRight(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_MOVER_RIGHT_RIGHT : characters.OneWayMoverRightRights.add(new OnewayMoverRightRight(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_UP : characters.platforms.add(new OneWayUp(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_DOWN : characters.platforms.add(new OneWayDown(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_LEFT : characters.platforms.add(new OneWayLeft(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_RIGHT : characters.platforms.add(new OneWayRight(character.x, character.y - 32));
+					case CharacterTypes.MOVER_UP : characters.platforms.add(new MoverUp(character.x, character.y - 32));
+					case CharacterTypes.MOVER_DOWN : characters.platforms.add(new MoverDown(character.x, character.y - 32));
+					case CharacterTypes.MOVER_LEFT : characters.platforms.add(new MoverLeft(character.x, character.y - 32));
+					case CharacterTypes.MOVER_RIGHT : characters.platforms.add(new MoverRight(character.x, character.y - 32));
+					case CharacterTypes.SIDE_MOVER_UP : characters.platforms.add(new SideMoverUp(character.x, character.y - 32));
+					case CharacterTypes.SIDE_MOVER_DOWN : characters.platforms.add(new SideMoverDown(character.x, character.y - 32));
+					case CharacterTypes.SIDE_MOVER_LEFT : characters.platforms.add(new SideMoverLeft(character.x, character.y - 32));
+					case CharacterTypes.SIDE_MOVER_RIGHT : characters.platforms.add(new SideMoverRight(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_MOVER_UP_UP : characters.platforms.add(new OnewayMoverUpUp(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_MOVER_DOWN_UP : characters.platforms.add(new OnewayMoverDownUp(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_MOVER_LEFT_UP : characters.platforms.add(new OnewayMoverLeftUp(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_MOVER_RIGHT_UP : characters.platforms.add(new OnewayMoverRightUp(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_MOVER_UP_DOWN : characters.platforms.add(new OnewayMoverUpDown(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_MOVER_DOWN_DOWN : characters.platforms.add(new OnewayMoverDownDown(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_MOVER_LEFT_DOWN : characters.platforms.add(new OnewayMoverLeftDown(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_MOVER_RIGHT_DOWN : characters.platforms.add(new OnewayMoverRightDown(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_MOVER_UP_LEFT : characters.platforms.add(new OnewayMoverUpLeft(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_MOVER_DOWN_LEFT : characters.platforms.add(new OnewayMoverDownLeft(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_MOVER_LEFT_LEFT : characters.platforms.add(new OnewayMoverLeftLeft(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_MOVER_RIGHT_LEFT : characters.platforms.add(new OnewayMoverRightLeft(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_MOVER_UP_RIGHT : characters.platforms.add(new OnewayMoverUpRight(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_MOVER_DOWN_RIGHT : characters.platforms.add(new OnewayMoverDownRight(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_MOVER_LEFT_RIGHT : characters.platforms.add(new OnewayMoverLeftRight(character.x, character.y - 32));
+					case CharacterTypes.ONE_WAY_MOVER_RIGHT_RIGHT : characters.platforms.add(new OnewayMoverRightRight(character.x, character.y - 32));
 				}
 			}
 		}

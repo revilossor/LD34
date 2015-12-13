@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="20" tilewidth="32" tileheight="32" nextobjectid="60">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="20" tilewidth="32" tileheight="32" nextobjectid="65">
  <tileset firstgid="1" name="tiles-basecolour" tilewidth="32" tileheight="32">
   <image source="tiles-basecolour.png" width="1480" height="32"/>
   <tile id="35">
@@ -22,7 +22,7 @@
   </data>
  </layer>
  <objectgroup name="characters">
-  <object id="1" type="PlayerStart" gid="47" x="1338.5" y="224.833"/>
+  <object id="1" type="PlayerStart" gid="47" x="226.5" y="484.833"/>
   <object id="2" type="OneWayUp" gid="48" x="600" y="500"/>
   <object id="3" type="OneWayUp" gid="48" x="632" y="500"/>
   <object id="4" type="OneWayUp" gid="48" x="664" y="500"/>
@@ -62,13 +62,17 @@
   <object id="46" type="OneWayDown" gid="49" x="657.333" y="588"/>
   <object id="47" type="OneWayDown" gid="49" x="693.333" y="586.667"/>
   <object id="48" type="OneWayUp" gid="48" x="628" y="580"/>
-  <object id="50" type="MoverUp" gid="52" x="285" y="594"/>
-  <object id="51" type="MoverDown" gid="53" x="539" y="443"/>
-  <object id="52" type="MoverRight" gid="54" x="952" y="608"/>
-  <object id="53" type="MoverLeft" gid="55" x="1361" y="601"/>
+  <object id="50" type="MoverUp" gid="52" x="703.667" y="307.333"/>
+  <object id="51" type="MoverDown" gid="53" x="796.333" y="131"/>
+  <object id="52" type="MoverLeft" gid="54" x="952" y="608"/>
+  <object id="53" type="MoverRight" gid="55" x="1361" y="601"/>
   <object id="54" type="SideMoverUp" gid="56" x="1381" y="521"/>
   <object id="57" type="SideMoverDown" gid="57" x="1342" y="276"/>
-  <object id="58" type="SideMoverRight" gid="58" x="887.333" y="421.333"/>
-  <object id="59" type="SideMoverLeft" gid="59" x="984.333" y="426"/>
+  <object id="58" type="SideMoverLeft" gid="58" x="887.333" y="421.333"/>
+  <object id="59" type="SideMoverRight" gid="59" x="984.333" y="426"/>
+  <object id="61" type="OneWayMoverUpUp" gid="60" x="226.667" y="541.333"/>
+  <object id="62" type="OneWayMoverDownUp" gid="61" x="324" y="496"/>
+  <object id="63" type="OneWayMoverLeftUp" gid="62" x="561.333" y="468"/>
+  <object id="64" type="OneWayMoverRightUp" gid="63" x="497.333" y="512"/>
  </objectgroup>
 </map>
