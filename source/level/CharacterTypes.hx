@@ -24,18 +24,8 @@ class CharacterTypes
 	public static inline var ONE_WAY_MOVER_LEFT_UP:String = "OneWayMoverLeftUp";
 	public static inline var ONE_WAY_MOVER_RIGHT_UP:String = "OneWayMoverRightUp";
 	
-	public static inline var ONE_WAY_MOVER_UP_DOWN:String = "OneWayMoverUpDown";
-	public static inline var ONE_WAY_MOVER_DOWN_DOWN:String = "OneWayMoverDownDown";
-	public static inline var ONE_WAY_MOVER_LEFT_DOWN:String = "OneWayMoverLeftDown";
-	public static inline var ONE_WAY_MOVER_RIGHT_DOWN:String = "OneWayMoverRightDown";
-	
 	public static inline var ONE_WAY_MOVER_UP_LEFT:String = "OneWayMoverUpLeft";
 	public static inline var ONE_WAY_MOVER_DOWN_LEFT:String = "OneWayMoverDownLeft";
 	public static inline var ONE_WAY_MOVER_LEFT_LEFT:String = "OneWayMoverLeftLeft";
 	public static inline var ONE_WAY_MOVER_RIGHT_LEFT:String = "OneWayMoverRightLeft";
-	
-	public static inline var ONE_WAY_MOVER_UP_RIGHT:String = "OneWayMoverUpRight";
-	public static inline var ONE_WAY_MOVER_DOWN_RIGHT:String = "OneWayMoverDownRight";
-	public static inline var ONE_WAY_MOVER_LEFT_RIGHT:String = "OneWayMoverLeftRight";
-	public static inline var ONE_WAY_MOVER_RIGHT_RIGHT:String = "OneWayMoverRightRight";
 }

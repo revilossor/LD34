@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="20" tilewidth="32" tileheight="32" nextobjectid="65">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="20" tilewidth="32" tileheight="32" nextobjectid="73">
  <tileset firstgid="1" name="tiles-basecolour" tilewidth="32" tileheight="32">
   <image source="tiles-basecolour.png" width="1480" height="32"/>
   <tile id="35">
@@ -22,7 +22,7 @@
   </data>
  </layer>
  <objectgroup name="characters">
-  <object id="1" type="PlayerStart" gid="47" x="226.5" y="484.833"/>
+  <object id="1" type="PlayerStart" gid="47" x="851.5" y="366.833"/>
   <object id="2" type="OneWayUp" gid="48" x="600" y="500"/>
   <object id="3" type="OneWayUp" gid="48" x="632" y="500"/>
   <object id="4" type="OneWayUp" gid="48" x="664" y="500"/>
@@ -74,5 +74,9 @@
   <object id="62" type="OneWayMoverDownUp" gid="61" x="324" y="496"/>
   <object id="63" type="OneWayMoverLeftUp" gid="62" x="561.333" y="468"/>
   <object id="64" type="OneWayMoverRightUp" gid="63" x="497.333" y="512"/>
+  <object id="69" type="OneWayMoverUpLeft" gid="64" x="49" y="602"/>
+  <object id="70" type="OneWayMoverDownLeft" gid="65" x="99" y="416"/>
+  <object id="71" type="OneWayMoverLeftLeft" gid="66" x="846" y="501"/>
+  <object id="72" type="OneWayMoverRightLeft" gid="67" x="612" y="459"/>
  </objectgroup>
 </map>

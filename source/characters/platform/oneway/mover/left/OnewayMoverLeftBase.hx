@@ -16,6 +16,7 @@ class OnewayMoverLeftBase extends Platform
 	public function new(?xp:Float = 0, ?yp:Float = 0, ?graphic:Dynamic = null) 
 	{
 		super(_startX = xp, _startY = yp);
+		allowCollisions = FlxObject.LEFT;
 		deltaVee = FlxPoint.weak();
 		loadGraphic(graphic, true, 32, 32);
 		animation.add('idle', [8, 9, 10, 11, 12, 13, 14]);

@@ -5,7 +5,7 @@ class OnewayMoverUpLeft extends OnewayMoverLeftBase
 
 	public function new(xp:Float, yp:Float) 
 	{
-		super(xp, yp, "assets/gfx/sidemoverup.png");
+		super(xp, yp, "assets/gfx/onewaymoverupleft.png");
 		deltaVee.set(0, -Settings.MOVER_VELOCITY_Y);
 	}
 	

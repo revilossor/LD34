@@ -3,21 +3,11 @@ import characters.platform.mover.MoverDown;
 import characters.platform.mover.MoverLeft;
 import characters.platform.mover.MoverRight;
 import characters.platform.mover.MoverUp;
-import characters.platform.oneway.mover.down.OnewayMoverDownDown;
-import characters.platform.oneway.mover.down.OnewayMoverLeftDown;
-import characters.platform.oneway.mover.down.OnewayMoverRightDown;
-import characters.platform.oneway.mover.down.OnewayMoverUpDown;
 import characters.platform.oneway.mover.left.OnewayMoverDownLeft;
 import characters.platform.oneway.mover.left.OnewayMoverLeftLeft;
 import characters.platform.oneway.mover.left.OnewayMoverRightLeft;
 import characters.platform.oneway.mover.left.OnewayMoverUpLeft;
-import characters.platform.oneway.mover.right.OnewayMoverDownRight;
-import characters.platform.oneway.mover.right.OnewayMoverLeftRight;
-import characters.platform.oneway.mover.right.OnewayMoverRightRight;
-import characters.platform.oneway.mover.right.OnewayMoverUpRight;
 import characters.platform.oneway.mover.up.OnewayMoverDownUp;
-import characters.platform.oneway.mover.up.OnewayMoverLeftUp;
-import characters.platform.oneway.mover.up.OnewayMoverLeftUp;
 import characters.platform.oneway.mover.up.OnewayMoverLeftUp;
 import characters.platform.oneway.mover.up.OnewayMoverRightUp;
 import characters.platform.oneway.mover.up.OnewayMoverUpUp;
@@ -63,7 +53,6 @@ class Level extends TiledMap
 		characters = new LevelCharacterGroup();
 		for (group in objectGroups) {
 			for(character in group.objects) {
-				trace('\tinit character ${character.type} at ${character.x}, ${character.y}');
 				switch(character.type) {
 					case CharacterTypes.ONE_WAY_UP : characters.platforms.add(new OneWayUp(character.x, character.y - 32));
 					case CharacterTypes.ONE_WAY_DOWN : characters.platforms.add(new OneWayDown(character.x, character.y - 32));
@@ -81,18 +70,10 @@ class Level extends TiledMap
 					case CharacterTypes.ONE_WAY_MOVER_DOWN_UP : characters.platforms.add(new OnewayMoverDownUp(character.x, character.y - 32));
 					case CharacterTypes.ONE_WAY_MOVER_LEFT_UP : characters.platforms.add(new OnewayMoverLeftUp(character.x, character.y - 32));
 					case CharacterTypes.ONE_WAY_MOVER_RIGHT_UP : characters.platforms.add(new OnewayMoverRightUp(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_MOVER_UP_DOWN : characters.platforms.add(new OnewayMoverUpDown(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_MOVER_DOWN_DOWN : characters.platforms.add(new OnewayMoverDownDown(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_MOVER_LEFT_DOWN : characters.platforms.add(new OnewayMoverLeftDown(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_MOVER_RIGHT_DOWN : characters.platforms.add(new OnewayMoverRightDown(character.x, character.y - 32));
 					case CharacterTypes.ONE_WAY_MOVER_UP_LEFT : characters.platforms.add(new OnewayMoverUpLeft(character.x, character.y - 32));
 					case CharacterTypes.ONE_WAY_MOVER_DOWN_LEFT : characters.platforms.add(new OnewayMoverDownLeft(character.x, character.y - 32));
 					case CharacterTypes.ONE_WAY_MOVER_LEFT_LEFT : characters.platforms.add(new OnewayMoverLeftLeft(character.x, character.y - 32));
 					case CharacterTypes.ONE_WAY_MOVER_RIGHT_LEFT : characters.platforms.add(new OnewayMoverRightLeft(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_MOVER_UP_RIGHT : characters.platforms.add(new OnewayMoverUpRight(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_MOVER_DOWN_RIGHT : characters.platforms.add(new OnewayMoverDownRight(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_MOVER_LEFT_RIGHT : characters.platforms.add(new OnewayMoverLeftRight(character.x, character.y - 32));
-					case CharacterTypes.ONE_WAY_MOVER_RIGHT_RIGHT : characters.platforms.add(new OnewayMoverRightRight(character.x, character.y - 32));
 				}
 			}
 		}

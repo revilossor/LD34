@@ -62,7 +62,6 @@ class Player extends FlxGroup
 		_leftCharge = _rightCharge = 0;
 	}
 	public function chargeJump(side:String) {
-		trace('charge $side jump');
 		if (side == "left") {
 			if(_leftTween != null) { _leftTween.cancel(); }
 			_leftCharge = 0;
