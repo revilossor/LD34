@@ -1,10 +1,8 @@
 package characters.player;
 import flixel.FlxBasic;
-import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.group.FlxGroup;
-import flixel.tile.FlxTilemap;
 import flixel.tweens.FlxTween;
 import flixel.tweens.misc.VarTween;
 

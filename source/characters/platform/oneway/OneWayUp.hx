@@ -1,4 +1,4 @@
-package characters.oneway;
+package characters.platform.oneway;
 import characters.Character;
 import flixel.FlxObject;
 

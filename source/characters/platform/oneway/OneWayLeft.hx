@@ -1,4 +1,4 @@
-package characters.oneway;
+package characters.platform.oneway;
 import flixel.FlxObject;
 
 class OneWayLeft extends OneWayBase

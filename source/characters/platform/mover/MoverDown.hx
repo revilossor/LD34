@@ -1,4 +1,4 @@
-package characters.mover;
+package characters.platform.mover;
 
 class MoverDown extends MoverBase
 {

@@ -1,6 +1,6 @@
-package characters.mover;
+package characters.platform.oneway.mover.up;
 
-class MoverUp extends MoverBase
+class OnewayMoverUpUp extends OnewayMoverUpBase
 {
 	public function new(xp:Float, yp:Float) 
 	{

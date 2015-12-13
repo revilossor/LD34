@@ -1,6 +1,6 @@
 package states;
 import characters.Character;
-import characters.mover.MoverBase;
+import characters.platform.oneway.mover.up.OnewayMoverUpBase;
 import characters.player.Player;
 import characters.player.PlayerInputComponent;
 import flixel.FlxBasic;
@@ -46,8 +46,9 @@ class PlayState extends BaseState
 	}
 	override public function update() {
 		super.update();
-		FlxG.collide(_player.hitbox, _level.collidables, _player.hitSolid);
 		FlxG.collide(_player.hitbox, _level.characters, _player.hitSolid);
+		
+		FlxG.collide(_player.hitbox, _level.collidables, _player.hitSolid);
 	}
 	
 }

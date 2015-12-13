@@ -1,12 +1,11 @@
-package characters.mover;
-import flixel.FlxBasic;
+package characters.platform.oneway.mover.left;
 import flixel.FlxObject;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.tweens.misc.VarTween;
 import flixel.util.FlxPoint;
 
-class MoverBase extends Character
+class OnewayMoverLeftBase extends Platform
 {
 	public var deltaVee:FlxPoint;
 	var _tween:VarTween;
@@ -17,9 +16,8 @@ class MoverBase extends Character
 	public function new(?xp:Float = 0, ?yp:Float = 0, ?graphic:Dynamic = null) 
 	{
 		super(_startX = xp, _startY = yp);
-		immovable = true;
 		deltaVee = FlxPoint.weak();
-		loadGraphic(graphic, true, 32, 16);
+		loadGraphic(graphic, true, 16, 32);
 		animation.add('idle', [2]);
 		animation.add('active', [2, 3, 4, 5, 6, 7, 8], Settings.FRAME_RATE);
 		animation.add('inactive', [1]);
